@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  @model Login
+  <div>
+    <h3 class="lead">Login</h3>
+    <form action="/login", method="POST">
+    <span asp-validation-for="UserName"></span>
+      <p>UserName: <input type="text" asp-for="UserName"></p>
+      <span asp-validation-for="Password"></span>
+      <p>Password: <input type="password" asp-for="Password"></p><br>
+      <input type="submit" value="Login" class="btn btn-success">
+    </form>
+  </div>
+</body>
+</html>

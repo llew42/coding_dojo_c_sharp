@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All Weddings</title>
+</head>
+<body>
+@model List<Hobby>
+  <div>
+    <h1>Hobbies</h1>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Enthusiasts</th>
+          </tr>
+        </thead>
+        <tbody>
+        @foreach(var i in ViewBag.AllHobbies){
+        <tr>
+            <td><a href="/hobby/@i.HobbyId">@i.Name</a></td>
+            <td>@i.userhobbies.Count</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+    </div>
+      <a class="btn btn-primary" href="/CreateHobby">Create a Hobby</a>
+  </div>
+</body>
+</html>

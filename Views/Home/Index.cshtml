@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <h1>Welcome!</h1>
+      <div>
+        <h3 class="lead">Register</h3>
+        @model User
+        <form action="/register", method="POST">
+          <p>First Name:</p>
+          <span asp-validation-for="FirstName"></span>
+          <input type="text" asp-for="FirstName">
+          <p>Last Name:</p>
+          <span asp-validation-for="LastName"></span>
+          <input type="text" asp-for="LastName">
+          <p>User Name:</p>
+          <span asp-validation-for="UserName"></span>
+          <input type="text" asp-for="UserName">
+          <p>Password:</p>
+          <span asp-validation-for="Password"></span>
+          <input type="password" asp-for="Password">
+          <p>Confirm Password:</p>
+          <span asp-validation-for="PwConfirm"></span>
+          <input type="password" asp-for="PwConfirm"><br>
+          <input type="submit" value="Register" class="btn btn-primary">
+        </form>
+      </div>
+  </div>
+</body>
+</html>
